@@ -1,0 +1,2 @@
+rootProject.name = 'Rainkeeper-Assignment3'
+include 'core', 'lwjgl3'

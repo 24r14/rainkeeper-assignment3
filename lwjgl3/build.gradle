@@ -1,0 +1,21 @@
+apply plugin: 'application'
+application.mainClass = 'com.badlogic.drop.lwjgl3.Lwjgl3Launcher'
+sourceSets.main.resources.srcDirs += [rootProject.file('assets')]
+dependencies {
+    implementation project(':core')
+    implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+}
+run {
+    workingDir = rootProject.file('assets')
+    if (System.getProperty('os.name').toLowerCase().contains('mac')) jvmArgs '-XstartOnFirstThread'
+}
+tasks.register('fatJar', Jar) {
+    archiveFileName = 'Rainkeeper-Assignment3.jar'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    dependsOn configurations.runtimeClasspath
+    from sourceSets.main.output
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/INDEX.LIST'
+    manifest { attributes 'Main-Class': application.mainClass.get(), 'Multi-Release': 'true', 'Enable-Native-Access': 'ALL-UNNAMED' }
+}

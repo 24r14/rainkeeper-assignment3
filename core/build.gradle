@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+dependencies { api "com.badlogicgames.gdx:gdx:$gdxVersion" }
+// The assertions below run through JavaExec, without a JUnit dependency.
+test { failOnNoDiscoveredTests = false }
+tasks.register('verifyRules', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'com.badlogic.drop.GameRulesTest'
+}
+check.dependsOn verifyRules

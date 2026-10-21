@@ -1,0 +1,23 @@
+RAINKEEPER ASSETS
+
+All game artwork and audio is in assets/custom/ and is reused unchanged from
+the previous Rainkeeper assignment version:
+
+night-garden.png - nighttime garden and skyline background
+bucket.png       - amber/gold collection bucket
+rain.png         - blue raindrop
+gold.png         - gold bonus raindrop
+hazard.png       - red hazard
+heart.png        - life indicator
+pixel.png        - one-pixel image used for UI panels and button borders
+catch.wav        - normal collection sound
+gold.wav         - bonus collection sound
+hurt.wav         - lost-life sound
+
+These custom assets were made with AI assistance for this project. They are
+not presented as hand-drawn or recorded by the student. No new artwork was
+substituted when extending the game for Assignment 3.
+
+The BitmapFont is libGDX's bundled default font. libGDX and the Gradle wrapper
+retain their upstream licenses; see https://github.com/libgdx/libgdx and
+https://github.com/gradle/gradle for the corresponding projects.
