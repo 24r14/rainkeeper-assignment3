@@ -92,6 +92,5 @@ REFERENCE AND CREDITS
 Reference: https://libgdx.com/wiki/start/simple-game-extended
 The Game/Screen structure follows the concepts in this guide. The menu layout,
 screen organization, theme, rules, and UI are customized for Rainkeeper.
-Assets in assets/custom were created for the earlier Rainkeeper version with
-AI assistance and are reused here. The code and documentation were also
-prepared with AI assistance. See ASSETS.txt for details.
+Assets in assets/custom are reused from the earlier Rainkeeper version.
+See ASSETS.txt for details.

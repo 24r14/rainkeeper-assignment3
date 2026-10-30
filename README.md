@@ -20,4 +20,4 @@ On macOS/Linux: `sh gradlew lwjgl3:run`.
 gradlew.bat core:check lwjgl3:fatJar
 ```
 
-This project extends the previous Rainkeeper game with separate classes and screen navigation for CSA Assignment 3. Code, documentation, and the existing custom assets were prepared with AI assistance.
+This project extends the previous Rainkeeper game with separate classes and screen navigation for CSA Assignment 3.
